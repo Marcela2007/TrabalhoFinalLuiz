@@ -1,0 +1,190 @@
+.hero, .about, .features, .cards, .footer {
+    width: 155%;
+  }
+
+/*banner*/
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    padding: 0 40px;
+    background-image: url('../img/Banner-Snoopy-Music.png');
+    background-size: cover;
+    background-position: right;
+  }
+
+  .hero h1 {
+    font-size: 64px;
+    max-width: 700px;
+    line-height: 1.1;
+    color: #f0f0f0;
+  }
+
+  .hero p {
+    font-size: 20px;
+    color: #ccc;
+    margin: 20px 0 40px;
+  }
+
+  .hero-buttons {
+    display: flex;
+    gap: 20px;
+  }
+
+  .hero-buttons button {
+    padding: 15px 30px;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  .btn-green {
+    background-color: #1171ee;
+    color: white;
+  }
+
+  .btn-green:hover {
+    background-color: #0d54af;
+  }
+
+  .btn-white {
+    background-color: white;
+    color: #000;
+  }
+
+  .btn-white:hover {
+    background-color: #f3f3f3;
+  }
+
+  /*  SEÇÃO 1 */
+  .about {
+    text-align: center;
+    padding: 120px 40px 100px;
+    background-color: #000000; /*cor de fundo da seçao 2*/
+  }
+
+  .about h2 {
+    font-size: 42px;
+    margin-bottom: 20px;
+    font-weight: 700;
+    color: #aaa;
+  }
+
+  .about p {
+    font-size: 18px;
+    color: #d3d3d3;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+
+
+  /*  SEÇÃO 3 */
+.features {
+padding: 100px 40px;
+text-align: center;
+background-color: #000;
+}
+
+.features h2 {
+font-size: 44px;
+font-weight: 700;
+margin-bottom: 20px;
+color: #aaa;
+}
+
+.features p {
+font-size: 18px;
+color: #ccc;
+max-width: 800px;
+margin: 0 auto 60px;
+line-height: 1.6;
+}
+
+/*  SEÇÃO 4 cards */
+.cards {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+gap: 30px;
+justify-items: center;
+background-color: #000;
+padding: 20px;
+}
+
+.card {
+width: 100%;
+max-width: 250px;
+height: 450px;
+border-radius: 25px;
+overflow: hidden;
+transition: transform 0.3s ease;
+cursor: pointer;
+box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+.card:hover {
+transform: scale(1.05);
+}
+
+.card img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+
+/*rodape provisorio*/
+.footer {
+background-color: #000;
+padding: 30px 40px;
+color: #aaa;
+font-size: 14px;
+text-align: center;
+border-top: 1px solid #222;
+}
+
+.footer-content {
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 10px;
+}
+
+.footer-links {
+display: flex;
+gap: 20px;
+}
+
+.footer-links a {
+color: #aaa;
+text-decoration: none;
+transition: color 0.3s;
+}
+
+.footer-links a:hover {
+color: #1171ee;
+}
+
+
+
+  @media (max-width: 768px) {
+    .hero h1 {
+      font-size: 40px;
+    }
+
+    .hero-buttons {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .about h2 {
+      font-size: 28px;
+    }
+
+    .about p {
+      font-size: 16px;
+    }
+  }
