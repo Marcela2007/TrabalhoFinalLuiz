@@ -35,9 +35,11 @@ header {
   
   nav ul li a {
     text-decoration: none;
-    color: white;
+    color: #7eb6ff;
+    font-size: 20px;
     font-weight: 500;
     transition: color 0.3s;
+    text-shadow: 2px 2px 6px rgba(69, 143, 255, 0.808);
   }
   
   nav ul li a:hover {
