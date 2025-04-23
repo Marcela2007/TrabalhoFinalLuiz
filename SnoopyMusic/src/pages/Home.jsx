@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import './Home.css';
 
 const Home = () => {
@@ -7,8 +8,11 @@ const Home = () => {
         <h1>Uma experiência única</h1>
         <p>Sua música. Sem limites.</p>
         <div className="hero-buttons">
-          <button className="btn-green">OBTÊ-LO AGORA</button>
-          <button className="btn-white">WEB PLAYER</button>
+          {/* Corrigido o link de navegação para "Premium" */}
+          <Link to="/premium">
+            <button className="btn-blue">Premium</button>
+          </Link>
+          <button className="btn-white">Cadastrar-se</button>
         </div>
       </div>
 
@@ -43,8 +47,6 @@ const Home = () => {
           Streaming em todas as plataformas? Claro. Letras e playlists ilimitadas? Você tem.
         </p>
       </div>
-
-     
 
       <footer className="footer">
         <div className="footer-content">

@@ -12,8 +12,8 @@ function App() {
      <NavBar/>
      <Home />
       <Routes>       
-        <Route path="/obter" element={<div>Obtê-lo agora</div>} />
-        <Route path="/premium" element={<div>Página Premium</div>} />
+      <Route path="/obter" element={<div>Inicio</div>} />
+        <Route path="/premium" element={<div>Artistas</div>} />
         <Route path="/login" element={<div>Entrar</div>} />
       </Routes>
     </Router>

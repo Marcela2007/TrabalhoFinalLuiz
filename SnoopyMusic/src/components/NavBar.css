@@ -85,3 +85,196 @@ header {
     }
   }
   
+/* Navbar qunado o usuario estiver logado  */
+.top-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background: #1e1e1e;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  z-index: 1000;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Seções da navbar */
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #1171ee;
+}
+
+.logo i {
+  font-size: 24px;
+}
+
+/* Links */
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+  align-items: center;
+}
+
+.nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+  color: #1db954;
+}
+
+/* Barra de busca */
+.nav-search input {
+  padding: 8px 14px;
+  border-radius: 20px;
+  border: none;
+  width: 220px;
+  background-color: #2a2a2a;
+  color: #fff;
+}
+
+.nav-search input::placeholder {
+  color: #b3b3b3;
+}
+
+/* Botão de login */
+.login {
+  background: #1db954;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 20px;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.login:hover {
+  background: #1ed760;
+}
+
+/* Estilo da área de pesquisa e login na navbar */
+.nav-search {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav-search input {
+  padding: 8px 14px;
+  border-radius: 20px;
+  border: none;
+  width: 200px;
+}
+
+.nav-search .login {
+  background: #1db954;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 20px;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.nav-search .login:hover {
+  background: #1ed760;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+}
+
+.nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+  color: #1db954;
+}
+
+
+/* -------------- SIDEBAR -------------- */
+.sidebar {
+  width: 240px;
+  background: #000;
+  padding: 20px;
+  height: calc(100vh - 60px); /* altura ajustada por causa da navbar */
+  position: fixed;
+  top: 60px; /* começa abaixo do topo */
+  left: 0;
+  overflow-y: auto;
+}
+
+
+.sidebar h2 {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.sidebar .playlist {
+  background: #282828;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.sidebar .playlist button {
+  margin-top: 10px;
+  padding: 8px 12px;
+  border: none;
+  background: #1db954;
+  color: white;
+  border-radius: 16px;
+  cursor: pointer;
+}
+
+.sidebar .links {
+  list-style: none;
+  padding: 0;
+  font-size: 12px;
+}
+
+.sidebar .links li {
+  margin-bottom: 8px;
+}
+
+.sidebar .links a {
+  color: #b3b3b3;
+  text-decoration: none;
+}

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carrossel de Vídeos</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #000;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+      font-size: 2em;
+    }
+
+    .carousel {
+      position: relative;
+      width: 100%;
+      max-width: 400px;
+      overflow: hidden;
+    }
+
+    .carousel-track {
+      display: flex;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .carousel-slide {
+      min-width: 100%;
+      flex-shrink: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: #111;
+      padding: 10px;
+    }
+
+    .carousel-slide video {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    .controls {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      max-width: 400px;
+      margin-top: 10px;
+    }
+
+    .controls button {
+      background-color: #444;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    .controls button:hover {
+      background-color: #666;
+    }
+
+    @media (min-width: 768px) {
+      .carousel {
+        max-width: 600px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Ouça os artistas</h1>
+  <div class="carousel">
+    <div class="carousel-track" id="carousel-track">
+      <div class="carousel-slide">
+        <video src="video1.mp4" controls></video>
+      </div>
+      <div class="carousel-slide">
+        <video src="video2.mp4" controls></video>
+      </div>
+      <div class="carousel-slide">
+        <video src="video3.mp4" controls></video>
+      </div>
+    </div>
+  </div>
+  <div class="controls">
+    <button id="prev">Anterior</button>
+    <button id="next">Próximo</button>
+  </div>
+
+  <script>
+    const track = document.getElementById('carousel-track');
+    const slides = Array.from(track.children);
+    let currentIndex = 0;
+
+    document.getElementById('next').addEventListener('click', () => {
+      if (currentIndex < slides.length - 1) {
+        currentIndex++;
+        updateCarousel();
+      }
+    });
+
+    document.getElementById('prev').addEventListener('click', () => {
+      if (currentIndex > 0) {
+        currentIndex--;
+        updateCarousel();
+      }
+    });
+
+    function updateCarousel() {
+      const slideWidth = slides[0].getBoundingClientRect().width;
+      track.style.transform = `translateX(-${slideWidth * currentIndex}px)`;
+    }
+  </script>
+</body>
+</html>
