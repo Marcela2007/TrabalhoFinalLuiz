@@ -18,11 +18,12 @@ const NavBar = () => {
       </div>
 
       <nav>
-        <ul className={menuOpen ? 'open' : ''}>
-          <li><Link to="/" onClick={() => setMenuOpen(false)}>Inicio</Link></li>
-          <li><Link to="/Artistas" onClick={() => setMenuOpen(false)}>Artistas</Link></li>
-          <li><Link to="/login" onClick={() => setMenuOpen(false)}>Entrar</Link></li>
-        </ul>
+      <ul className={menuOpen ? 'open' : ''}>
+        <li><Link to="/" onClick={() => setMenuOpen(false)}>Início</Link></li>
+        <li><Link to="/premium" onClick={() => setMenuOpen(false)}>Premium</Link></li>
+        <li><Link to="/login" onClick={() => setMenuOpen(false)}>Entrar</Link></li>
+      </ul>
+
       </nav>
     </header>
   );
