@@ -1,0 +1,121 @@
+/* === CONFIGURAÇÕES GLOBAIS === */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  html, body {
+    height: 100%;
+    width: 100%;
+  }
+  
+  /* === TÍTULO DA SEÇÃO DE CADASTRO === */
+  .titulo-cadastro {
+    text-align: center;
+    color: #000;
+  }
+  
+  /* === CONTAINER PRINCIPAL === */
+  .container-cadastro {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    background: #6c8ef7;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  /* === PAINEL DE REDIRECIONAMENTO PARA LOGIN === */
+  .painel-redirect-cadastro {
+    background: #6c8ef7;
+    color: white;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    border-top-left-radius: 100px;
+    border-bottom-left-radius: 100px;
+    position: absolute;
+    right: 0;
+    z-index: 2;
+    transition: transform 1s ease-in-out;
+  }
+  
+  .painel-redirect-cadastro button {
+    margin-top: 20px;
+    padding: 10px 25px;
+    border: 2px solid white;
+    background: #6c8ef7;
+    color: #fcfcfd;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s, transform 0.2s;
+  }
+  
+  .painel-redirect-cadastro button:hover {
+    background: #6c8ef7;
+    color: white;
+    transform: scale(1.05);
+  }
+  
+  /* === ANIMAÇÃO DE SAÍDA PARA A ESQUERDA === */
+  .deslizar-esquerda {
+    transform: translateX(-100%);
+  }
+  
+  /* === PAINEL COM FORMULÁRIO DE CADASTRO === */
+  .painel-formulario-cadastro {
+    width: 50%;
+    margin-right: 50%;
+    background: white;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 1;
+  }
+  
+  .painel-formulario-cadastro h2 {
+    margin-bottom: 20px;
+  }
+  
+  /* === CAMPOS DE INPUT COM ÍCONES === */
+  .grupo-input {
+    position: relative;
+    margin-bottom: 15px;
+  }
+  
+  .grupo-input input {
+    width: 100%;
+    padding: 10px 35px 10px 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+  }
+  
+  .grupo-input .icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #777;
+  }
+  
+  /* === BOTÃO DE CADASTRO === */
+  .botao-cadastrar {
+    padding: 10px;
+    background: #6c8ef7;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-bottom: 15px;
+  }
+  

@@ -3,6 +3,7 @@ import './App.css';
 import NavBar from './components/NavBar';
 import Home from './pages/Home';
 import Premium from './pages/Premium'; // importa a página Premium
+import Cadastro from './pages/Cadastro';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/premium" element={<Premium />} />
+        <Route path="/cadastro" element={<Cadastro />} />
         <Route path="/login" element={<div>Entrar</div>} />
       </Routes>
     </Router>
