@@ -1,223 +1,230 @@
+/* Estrutura geral */
+.premium-wrapper {
+  min-height: 100vh;
+  overflow-x: hidden;
+  background-color: #fff;
+}
+
 /* HERO */
 .premium-hero {
-    text-align: center;
-    padding: 60px 20px 20px;
-    background-color: #000; /* fundo preto */
-    color: white; /* mantém o texto legível */
-  }
-  
-  
-  .premium-hero h1 {
-    font-size: 48px;
-    margin-bottom: 10px;
-  }
-  
-  .premium-subtitle {
-    margin-bottom: 20px;
-    font-size: 20px;
-  }
-  
-  /* SWITCH */
-  .plans-switch-wrapper {
-    text-align: center;
-    margin-top: 20px;
-    position: relative;
-  }
-  
-  .plans-switch-buttons {
-    background: white;
-    border-radius: 25px;
-    display: inline-flex;
-    overflow: hidden;
-    margin-top: 20px;
-    z-index: 4;
-    position: relative;
-  }
-  
-  .plans-switch-buttons button {
-    padding: 10px 20px;
-    border: none;
-    font-weight: bold;
-    cursor: pointer;
-    z-index: 2px;
-  }
-  
-  .selected-plan {
-    background-color: #004aac;
-    color: white;
-  }
-  
-  .plans-wave {
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-    width: 100%;
-    z-index: -1;
-    background-color: #000; /* fundo preto para onde o SVG é transparente */
-  }
-  
-  
-  .plans-wave svg {
-    transform: rotate(180deg);
-    display: block;
-    width: 100%;
-    height: auto;
-  }
-  
-  /* PLANOS */
-  .plans-container {
-    background-color: #1171ee;
-    padding: 80px 20px 40px;
-  }
-  
-  .plan-card {
-    background: white;
-    color: black;
-    border-radius: 10px;
-    padding: 20px;
-    max-width: 600px;
-    margin: 20px auto;
-  }
-  
-  .plan-tag {
-    display: inline-block;
-    padding: 4px 8px;
-    border-radius: 5px;
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
-  
-  .premium { background-color: #a259ff; color: white; }
-  .duo { background-color: #30f0e4; color: black; }
-  .family { background-color: #ff8152; color: white; }
-  
-  .plan-price {
-    font-size: 18px;
-    margin: 10px 0;
-  }
-  
-  .plan-btn {
-    display: block;
-    background: #0f0f0f;
-    color: white;
-    text-align: center;
-    padding: 12px;
-    border-radius: 10px;
-    margin: 10px 0;
-    font-weight: bold;
-    text-decoration: none;
-  }
-  
-  /* COMPARAÇÃO */
-  .compare-plans-section {
-    padding: 60px 20px;
-    background-color: #0f0f12;
-    color: white;
-    text-align: center;
-  }
-  
-  .compare-plans-section h2 {
-    font-size: 36px;
-    margin-bottom: 30px;
-  }
-  
-  .compare-table {
-    max-width: 800px;
-    margin: 0 auto;
-    background: #16161a;
-    border-radius: 10px;
-    padding: 20px;
-  }
-  
-  .compare-table select {
-    background: transparent;
-    border: 1px solid #1171ee;
-    color: white;
-    padding: 10px;
-    margin: 10px;
-  }
-  
-  .compare-row {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px;
-    border-bottom: 1px solid #2b2b2b;
-  }
-  
-  .compare-row:last-child {
-    border: none;
-  }
-  
-  /* GIFT CARD */
-  .gift-card-section {
-    padding: 60px 30px;
-    background-color: #f9f6ff;
-    text-align: center;
-  }
-  
-  .gift-card-section h1 {
-    font-size: 3rem;
-    margin-bottom: 10px;
-    color: #000;
-  }
-  
-  .gift-card-section p {
-    font-size: 1.1rem;
-    margin-bottom: 30px;
-    color: #333;
-  }
-  
-  .gift-buttons-group {
-    margin-bottom: 40px;
-  }
-  
-  .gift-buttons-group button {
-    background-color: black;
-    color: white;
-    padding: 10px 25px;
-    border: none;
-    margin: 0 10px;
-    font-weight: bold;
-    cursor: pointer;
-    border-radius: 3px;
-  }
-  
-  .gift-buttons-group button:hover {
-    background-color: #333;
-    transform: scale(1.05);
-    transition: all 0.2s ease;
-  }
-  
-  .gift-coupon-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    margin-bottom: 50px;
-  }
-  
-  .gift-coupon {
-    transition: all 0.3s ease;
-    transform: scale(1);
-  }
-  
-  .gift-coupon:hover {
-    transform: scale(1.1);
-  }
-  
-  .gift-coupon-container:hover .gift-coupon:not(:hover) {
-    transform: translateX(-20px);
-    opacity: 0.7;
-  }
-  
-  .gift-coupon-container:hover .gift-coupon:last-child:not(:hover) {
-    transform: translateX(20px);
-  }
- /* Section 5  */
- .legal {
-    font-size: 1rem;
-    background-color: #0c0a0e;
-    color: #ffffff;
-    padding: 20px;
-    margin-top: 30px;
-  }  
+  text-align: center;
+  padding: 60px 20px 20px;
+  background-color: #000;
+  color: white;
+}
+
+.premium-hero h1 {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.premium-subtitle {
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
+/* SWITCH */
+.plans-switch-wrapper {
+  text-align: center;
+  margin-top: 20px;
+  position: relative;
+}
+
+.plans-switch-buttons {
+  background: white;
+  border-radius: 25px;
+  display: inline-flex;
+  overflow: hidden;
+  margin-top: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.plans-switch-buttons button {
+  padding: 10px 20px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.selected-plan {
+  background-color: #004aac;
+  color: white;
+}
+
+.plans-wave {
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  z-index: 0;
+  background-color: #000;
+}
+
+.plans-wave svg {
+  transform: rotate(180deg);
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* PLANOS */
+.plans-container {
+  background-color: #1171ee;
+  padding: 80px 20px 40px;
+}
+
+.plan-card {
+  background: white;
+  color: black;
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+.plan-tag {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 5px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.premium { background-color: #a259ff; color: white; }
+.duo { background-color: #30f0e4; color: black; }
+.family { background-color: #ff8152; color: white; }
+
+.plan-price {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.plan-btn {
+  display: block;
+  background: #0f0f0f;
+  color: white;
+  text-align: center;
+  padding: 12px;
+  border-radius: 10px;
+  margin: 10px 0;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* COMPARAÇÃO */
+/* Seção Comparativa */
+.compare-plans-section {
+  padding: 60px 20px;
+  background-color: #0f0f12;
+  color: white;
+  text-align: center;
+}
+
+.compare-plans-section h2 {
+  font-size: 36px;
+  margin-bottom: 30px;
+}
+
+.compare-table {
+  max-width: 800px;
+  margin: 0 auto;
+  background: #16161a;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.compare-table select {
+  background: transparent;
+  border: 1px solid #1171ee;
+  color: rgb(119, 119, 119);
+  padding: 10px;
+  margin: 10px;
+}
+
+.compare-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid #2b2b2b;
+}
+
+.compare-row:last-child {
+  border: none;
+}
+
+
+/* GIFT CARD */
+.gift-card-section {
+  padding: 60px 30px;
+  background-color: #f9f6ff;
+  text-align: center;
+}
+
+.gift-card-section h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  color: #000;
+}
+
+.gift-card-section p {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.gift-buttons-group {
+  margin-bottom: 40px;
+}
+
+.gift-buttons-group button {
+  background-color: black;
+  color: white;
+  padding: 10px 25px;
+  border: none;
+  margin: 0 10px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.gift-buttons-group button:hover {
+  background-color: #333;
+  transform: scale(1.05);
+  transition: all 0.2s ease;
+}
+
+.gift-coupon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 50px;
+}
+
+.gift-coupon {
+  transition: all 0.3s ease;
+  transform: scale(1);
+}
+
+.gift-coupon:hover {
+  transform: scale(1.1);
+}
+
+.gift-coupon-container:hover .gift-coupon:not(:hover) {
+  transform: translateX(-20px);
+  opacity: 0.7;
+}
+
+.gift-coupon-container:hover .gift-coupon:last-child:not(:hover) {
+  transform: translateX(20px);
+}
+
+/* LEGAL */
+.legal {
+  font-size: 1rem;
+  background-color: #0c0a0e;
+  color: #ffffff;
+  padding: 20px;
+  margin-top: 30px;
+}
