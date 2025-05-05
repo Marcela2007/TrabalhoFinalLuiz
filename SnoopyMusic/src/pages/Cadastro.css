@@ -1,113 +1,132 @@
+/* === TÍTULO DA SEÇÃO DE CADASTRO === */
+.titulo-cadastro {
+  text-align: center;
+  color: #000;
+}
 
-  /* === TÍTULO DA SEÇÃO DE CADASTRO === */
-  .titulo-cadastro {
-    text-align: center;
-    color: #000;
-  }
-  
-  /* === CONTAINER PRINCIPAL === */
-  .container-cadastro {
-    display: flex;
-    height: 100vh;
-    width: 100vw;
-    background: #6c8ef7;
-    overflow: hidden;
-    position: relative;
-  }
-  
-  /* === PAINEL DE REDIRECIONAMENTO PARA LOGIN === */
-  .painel-redirect-cadastro {
-    background: #6c8ef7;
-    color: white;
+/* === CONTAINER PRINCIPAL === */
+.container-cadastro {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  background: #6c8ef7;
+  overflow: hidden;
+  position: relative;
+}
+
+/* === PAINEL DE REDIRECIONAMENTO PARA LOGIN === */
+.painel-redirect-cadastro {
+  background: #6c8ef7;
+  color: white;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  border-top-left-radius: 100px;
+  border-bottom-left-radius: 100px;
+  position: absolute;
+  right: 0;
+  z-index: 1;
+  transition: transform 1s ease-in-out, width 1s ease-in-out;
+  overflow: hidden; /* Garante que a animação de redirecionamento não deixe espaço branco */
+}
+
+/* Botão do painel de redirecionamento */
+.painel-redirect-cadastro button {
+  margin-top: 20px;
+  padding: 10px 25px;
+  border: 2px solid white;
+  background: #6c8ef7;
+  color: #fcfcfd;
+  font-weight: bold;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s, transform 0.2s;
+}
+
+.painel-redirect-cadastro button:hover {
+  background: #6c8ef7;
+  color: white;
+  transform: scale(1.05);
+}
+
+/* === ANIMAÇÃO DE EXPANSÃO DO PAINEL === */
+@keyframes expandirPainel {
+  from {
+    transform: translateX(0);
     width: 50%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 40px;
     border-top-left-radius: 100px;
     border-bottom-left-radius: 100px;
-    position: absolute;
-    right: 0;
-    z-index: 2;
-    transition: transform 1s ease-in-out;
   }
-  
-  .painel-redirect-cadastro button {
-    margin-top: 20px;
-    padding: 10px 25px;
-    border: 2px solid white;
-    background: #6c8ef7;
-    color: #fcfcfd;
-    font-weight: bold;
-    font-size: 16px;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background 0.3s, color 0.3s, transform 0.2s;
+  to {
+    transform: translateX(0);
+    width: 100%; /* Garante que o painel vai ocupar 100% da largura */
+    border-radius: 0;
   }
-  
-  .painel-redirect-cadastro button:hover {
-    background: #6c8ef7;
-    color: white;
-    transform: scale(1.05);
-  }
-  
-  /* === ANIMAÇÃO DE SAÍDA PARA A ESQUERDA === */
-  .deslizar-esquerda {
-    transform: translateX(-100%);
-  }
-  
-  /* === PAINEL COM FORMULÁRIO DE CADASTRO === */
-  .painel-formulario-cadastro {
-    width: 50%;
-    margin-right: 50%;
-    background: white;
-    padding: 50px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    z-index: 1;
-  }
-  
-  .painel-formulario-cadastro h2 {
-    margin-bottom: 20px;
-  }
-  
-  /* === CAMPOS DE INPUT COM ÍCONES === */
-  .grupo-input {
-    position: relative;
-    margin-bottom: 15px;
-  }
-  
-  .grupo-input input {
-    width: 100%;
-    padding: 10px 35px 10px 10px;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-  }
-  
-  .grupo-input .icon {
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    color: #777;
-  }
-  
-  /* === BOTÃO DE CADASTRO === */
-  .botao-cadastrar {
-    padding: 10px;
-    background: #6c8ef7;
-    color: white;
-    font-weight: bold;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    margin-bottom: 15px;
-  }
-  
-  /* === MENSAGEM DE SUCESSO === */
+}
+
+.expandir-e-cobrir {
+  animation: expandirPainel 1s ease forwards;
+  z-index: 10;
+}
+
+/* === PAINEL COM FORMULÁRIO DE CADASTRO === */
+.painel-formulario-cadastro {
+  width: 50%;
+  background: white;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  position: relative;
+}
+
+.painel-formulario-cadastro h2 {
+  margin-bottom: 20px;
+}
+
+/* === CAMPOS DE INPUT COM TAMANHO REDUZIDO === */
+.grupo-input {
+  width: 80%;
+  margin-bottom: 15px;
+}
+
+.grupo-input input {
+  width: 100%;
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.grupo-input .icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #777;
+}
+
+/* === BOTÃO DE CADASTRO === */
+.botao-cadastrar {
+  width: 80%;
+  padding: 10px;
+  background: #6c8ef7;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+
+/* === MENSAGEM DE SUCESSO === */
 .mensagem-sucesso {
   background-color: #d4edda;
   color: #155724;
@@ -117,4 +136,5 @@
   border: 1px solid #c3e6cb;
   text-align: center;
   font-weight: bold;
+  width: 80%;
 }

@@ -55,10 +55,12 @@ export default function Cadastro() {
 
   const irParaLogin = () => {
     const painel = document.getElementById('painelRedirectCadastro');
-    painel.classList.add('deslizar-esquerda');
+    painel.classList.add('expandir-e-cobrir'); // Inicia a animação
+
+    // Aguarda o tempo da animação (1 segundo) para redirecionar
     setTimeout(() => {
-      window.location.href = '/login';
-    }, 1000);
+      window.location.href = '/login'; // Redireciona após a animação
+    }, 1000); // Espera 1 segundo, o tempo da animação
   };
 
   return (

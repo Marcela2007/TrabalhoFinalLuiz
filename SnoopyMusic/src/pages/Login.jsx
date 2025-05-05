@@ -23,6 +23,11 @@ export default function Login() {
     setErrorMessage('');
     setSuccessMessage('');
 
+    if (!formData.username || !formData.password) {
+      setErrorMessage('Por favor, preencha todos os campos.');
+      return;
+    }
+
     const requestBody = {
       Nome: formData.username,
       Senha: formData.password,
@@ -43,7 +48,7 @@ export default function Login() {
         console.log('Usuário logado com sucesso!', data);
         localStorage.setItem('user', JSON.stringify(data.user));
         setSuccessMessage('Login realizado com sucesso! Redirecionando...');
-        
+
         setTimeout(() => {
           navigate('/home');
         }, 1500); // espera 1.5 segundos para redirecionar
@@ -82,13 +87,16 @@ export default function Login() {
 
   const goToRegister = () => {
     const panel = document.getElementById('leftPanel');
+    const fullpage = document.querySelector('.fullpage');
+    
     if (panel) {
-      panel.classList.add('slide-right');
+      panel.classList.add('slide-right'); // Inicia a animação do painel
+      fullpage.classList.add('slide'); // Aplica a animação de fundo
       setTimeout(() => {
-        navigate('/cadastro');
-      }, 1000);
+        navigate('/cadastro'); // Redireciona para a página de cadastro após a animação
+      }, 1000); // Espera 1 segundo para completar a animação
     } else {
-      navigate('/cadastro');
+      navigate('/cadastro'); // Se o painel não existir, apenas navega
     }
   };
 
