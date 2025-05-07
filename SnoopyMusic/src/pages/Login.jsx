@@ -108,7 +108,7 @@ export default function Login() {
         <button onClick={goToRegister}>Cadastro</button>
       </div>
 
-      <div className="right-panel">
+      <div className="right-panel full-width">
         <h2 className="log">Login</h2>
 
         {errorMessage && (
