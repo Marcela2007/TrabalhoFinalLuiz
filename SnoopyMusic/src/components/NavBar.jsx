@@ -19,7 +19,7 @@ const NavBar = () => {
 
       <nav>
       <ul className={menuOpen ? 'open' : ''}>
-        <li><Link to="/" onClick={() => setMenuOpen(false)}>Início</Link></li>
+        <li><Link to="/index" onClick={() => setMenuOpen(false)}>Início</Link></li>
         <li><Link to="/cadastro" onClick={() => setMenuOpen(false)}>Cadastro</Link></li>
         <li><Link to="/login" onClick={() => setMenuOpen(false)}>Entrar</Link></li>
       </ul>

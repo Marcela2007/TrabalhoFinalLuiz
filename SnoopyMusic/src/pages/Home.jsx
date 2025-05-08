@@ -8,7 +8,7 @@ const Home = () => {
       <div className="hero">
         <h1>Uma experiência única</h1>
         <p>Sua música. Sem limites.</p>
-        <div className="hero-buttons">
+        <div className="hero-buttons">       
           <Link to="/premium">
             <button className="btn-blue">Premium</button>
           </Link>

@@ -6,6 +6,7 @@ import Premium from './pages/Premium'; // importa a página Premium
 import Cadastro from './pages/Cadastro';
 import Login from './pages/Login';
 import Index from './pages/Index';
+import Profile from './pages/Profile';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/cadastro" element={<Cadastro />} />
         <Route path="/login" element={<Login />} />
         <Route path="/index" element={<Index />} />
+        <Route path="/profile" element={<Profile/>} />
         <Route path="/login" element={<div>Entrar</div>} />
       </Routes>
     </Router>

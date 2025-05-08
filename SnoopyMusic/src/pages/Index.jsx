@@ -1,5 +1,5 @@
 import React from 'react';
-import './css/style.css';
+import './style.css';
 
 const Index = () => {
   return (
@@ -27,7 +27,7 @@ const Index = () => {
         </ul>
 
         <div className="nav-right">
-          <button className="login">Perfil</button>
+          <button className="./Profile">Perfil</button>
         </div>
       </nav>
 
@@ -125,16 +125,66 @@ const Index = () => {
             <div className="album">
               <div className="album-img">
                 <img
-                  src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD..."
-                  alt="Base64 Image"
+                  src="https://cdn-images.dzcdn.net/images/cover/dc8a602909b1cd752aad82af47ce4810/0x1900-000000-80-0-0.jpg"
+                  alt="Coração Partido (Corazón Partío) (Ao Vivo)"
                 />
                 <div className="play-btn"><i className="fas fa-play"></i></div>
               </div>
-              <p>Título Desconhecido</p>
-              <small>Artista Desconhecido</small>
+              <p>Coração Partido (Corazón Partío) (Ao Vivo)</p>
+              <small>Grupo Menos É Mais</small>
             </div>
-          </div>
-        </section>
+        
+      </div>
+    </section>
+
+    <section className="popular">
+  <h2>Artistas populares</h2>
+  <div className="artists">
+    <div className="artist">
+      <img
+        src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSfTUMeTDQ3s6qFdJpEi9MdiV67DL7Xb5FUw3hFLRmq2qI2409MPXYLCbtuJayvQGy8ZH1HZRr5RC6JnbDA5eyD_A"
+        alt="BrunoM"
+      />
+      <p>Bruno Mars</p>
+    </div>
+    <div className="artist">
+      <img
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5zC-XGxtbO3cmpH73-i_ipfH6q7cuV2uKwA&s"
+        alt="Henrique e Juliano"
+      />
+      <p>Henrique e Juliano</p>
+    </div>
+    <div className="artist">
+      <img
+        src="https://t2.gstatic.com/licensed-image?q=tbn:ANd9GcTs-b7z_K8SpeWWfUBww84zVng7z2iqGm6YyoshAWzwKgzUtmesLSLu41dKR7OemJP1"
+        alt="Rihanna"
+      />
+      <p>Rihanna</p>
+    </div>
+    <div className="artist">
+      <img
+        src="https://i.scdn.co/image/ab67706f00000002bce4a897b3710e024a830611"
+        alt="Marília Mendonça"
+      />
+      <p>Marília Mendonça</p>
+    </div>
+    <div className="artist">
+      <img
+        src="https://tonamidia.com.br/wp-content/uploads/2021/12/BrunoeBarreto-OlhaOGolpe-02_ToNaMidia.jpg"
+        alt="Bruno e Barreto"
+      />
+      <p>Bruno e Barreto</p>
+    </div>
+    <div className="artist">
+      <img
+        src="https://www.cnnbrasil.com.br/wp-content/uploads/sites/12/2024/04/taylor-swift-eras-tour-4-e1713886488927.jpg?w=1200&h=1200&crop=11"
+        alt="Taylor Swift"
+      />
+      <p>Taylor Swift</p>
+    </div>
+  </div>
+</section>
+
       </div>
     </div>
   );
