@@ -1,0 +1,301 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Montserrat';
+    background: #121212;
+    color: #fff;
+    display: flex;
+  }
+  
+  /* -------------- MENU SUPERIOR -------------- */
+  .top-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    background: #1e1e1e;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    z-index: 1000;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Seções da navbar */
+  .nav-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .nav-right {
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Logo */
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #1171ee;
+  }
+  
+  .logo i {
+    font-size: 24px;
+  }
+  
+  /* Links */
+  .nav-links {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+    align-items: center;
+  }
+  
+  .nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: color 0.3s;
+  }
+  
+  .nav-links li a:hover {
+    color: #1db954;
+  }
+  
+  /* Barra de busca */
+  .nav-search input {
+    padding: 8px 14px;
+    border-radius: 20px;
+    border: none;
+    width: 220px;
+    background-color: #2a2a2a;
+    color: #fff;
+  }
+  
+  .nav-search input::placeholder {
+    color: #b3b3b3;
+  }
+  
+  /* Botão de login */
+  .login {
+    background: #1db954;
+    border: none;
+    padding: 8px 18px;
+    border-radius: 20px;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+  }
+  
+  .login:hover {
+    background: #1ed760;
+  }
+  
+  /* Estilo da área de pesquisa e login na navbar */
+.nav-search {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .nav-search input {
+    padding: 8px 14px;
+    border-radius: 20px;
+    border: none;
+    width: 200px;
+  }
+  
+  .nav-search .login {
+    background: #1db954;
+    border: none;
+    padding: 8px 18px;
+    border-radius: 20px;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+  }
+  
+  .nav-search .login:hover {
+    background: #1ed760;
+  }
+  
+  .nav-links {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+  }
+  
+  .nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: color 0.3s;
+  }
+  
+  .nav-links li a:hover {
+    color: #1db954;
+  }
+  
+  
+  /* -------------- SIDEBAR -------------- */
+  .sidebar {
+    width: 240px;
+    background: #000;
+    padding: 20px;
+    height: calc(100vh - 60px); /* altura ajustada por causa da navbar */
+    position: fixed;
+    top: 60px; /* começa abaixo do topo */
+    left: 0;
+    overflow-y: auto;
+  }
+  
+  
+  .sidebar h2 {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  
+  .sidebar .playlist {
+    background: #282828;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+  
+  .sidebar .playlist button {
+    margin-top: 10px;
+    padding: 8px 12px;
+    border: none;
+    background: #1db954;
+    color: white;
+    border-radius: 16px;
+    cursor: pointer;
+  }
+  
+  .sidebar .links {
+    list-style: none;
+    padding: 0;
+    font-size: 12px;
+  }
+  
+  .sidebar .links li {
+    margin-bottom: 8px;
+  }
+  
+  .sidebar .links a {
+    color: #b3b3b3;
+    text-decoration: none;
+  }
+  
+  /* -------------- CONTEÚDO PRINCIPAL -------------- */
+  .main {
+    margin-left: 240px;
+    padding: 100px 20px 20px 20px; /* espaço do topo + sidebar */
+    flex: 1;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+  
+  header input {
+    width: 60%;
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+  }
+  
+  header .btns button {
+    background: #fff;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  /* -------------- ÁLBUNS E ARTISTAS -------------- */
+  .highlights, .popular {
+    margin-top: 30px;
+  }
+  
+  .albums, .artists {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding-top: 10px;
+  }
+  
+  .album, .artist {
+    width: 150px;
+    flex-shrink: 0;
+    text-align: center;
+  }
+  
+  .album-img {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    border-radius: 8px;
+  }
+  
+  .album-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  .play-btn {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: #1db954;
+    color: white;
+    border-radius: 50%;
+    padding: 12px;
+    display: none;
+    cursor: pointer;
+    font-size: 16px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    transition: transform 0.2s;
+  }
+  
+  .play-btn:hover {
+    transform: scale(1.1);
+  }
+  
+  .album:hover .play-btn {
+    display: block;
+  }
+  
+  .artist img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  
+  
