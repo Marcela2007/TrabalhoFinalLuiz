@@ -25,7 +25,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 40px;
   border-top-right-radius: 100px;
   border-bottom-right-radius: 100px;
   position: absolute;
@@ -48,7 +47,7 @@
 }
 
 .left-panel button:hover {
-  background: #6c8ef7;
+  background: #7eb6ff;
   color: white;
   transform: scale(1.05);
 }
@@ -111,14 +110,7 @@
   padding: 10px 35px 10px 10px;
   border-radius: 8px;
   border: 1px solid #ccc;
-}
-
-.input-group .icon {
-  position: absolute;
-  right: 10px;
-  top: 50%;
-  transform: translateY(-50%);
-  color: #777;
+  background-color: white; /* Garantir que os campos de input sejam brancos */
 }
 
 /* === LINK PARA ESQUECEU A SENHA === */
@@ -140,50 +132,6 @@
   border-radius: 8px;
   cursor: pointer;
   margin-bottom: 15px;
-}
-
-/* === ÍCONES DE REDES SOCIAIS === */
-.social-icons {
-  display: flex;
-  gap: 10px;
-}
-
-.social-icons a,
-.social-icons button {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
-  color: #333;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  width: 40px;
-  height: 40px;
-  font-size: 18px;
-  transition: background 0.3s, color 0.3s;
-  background: white;
-  cursor: pointer;
-}
-
-.social-icons a:hover,
-.social-icons button:hover {
-  background: #6c8ef7;
-  color: white;
-}
-
-/* === MENSAGEM DE ERRO E SUCESSO === */
-.mensagem-erro {
-  color: red;
-  margin-bottom: 10px;
-  text-align: center;
-  font-weight: bold;
-}
-
-.mensagem-sucesso {
-  color: green;
-  margin-bottom: 10px;
-  text-align: center;
-  font-weight: bold;
 }
 
 /* === MODAL PARA ESQUECEU A SENHA === */
@@ -216,4 +164,18 @@
   margin-top: 10px;
   font-size: 0.9em;
   color: #333;
+}
+
+/* === RESPONSIVIDADE PARA TELAS PEQUENAS === */
+@media (max-width: 768px) {
+  .fullpage {
+    flex-direction: column;
+  }
+
+  .left-panel, .right-panel {
+    width: 100%;
+    height: auto;
+    position: relative;
+    margin: 0;
+  }
 }
