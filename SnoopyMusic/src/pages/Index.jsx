@@ -16,7 +16,7 @@ const Index = () => {
           </div>
 
           <div className="nav-search">
-            <input type="text" placeholder="O que você quer ouvir?" />
+            <input type="text" placeholder="Qual musica você quer ouvir?" />
           </div>
         </div>
 
