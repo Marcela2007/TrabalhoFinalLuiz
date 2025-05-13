@@ -51,6 +51,13 @@ const Index = () => {
           <button onClick={() => alert('Explorar agora')}>Recentementes</button>
         </div>
 
+
+
+
+
+
+
+
         <ul className="links">
           <li><a href="#">Legal</a></li>
           <li><a href="#">Política de privacidade</a></li>
